@@ -1,0 +1,6 @@
+/.venv
+/classes.txt
+/models
+/results
+/video_sources
+/__pycache__

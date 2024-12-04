@@ -1,7 +1,7 @@
-# 2 Camera Norm Tracker
+# 2 Camera Epipolar Line Tracker
 
 ## Description
-2 Camera Norm Tracker is a computer vision project designed to track objects using 2 camera feeds. It leverages YOLO11 for object detection and epipolar geometry for accurate tracking across different camera views. This project is useful for applications requiring object tracking in multi-camera setups, such as surveillance and sports analysis.
+2 Camera Epipolar Line Tracker is a computer vision project designed to track objects using 2 camera feeds. It leverages YOLO11 for object detection and epipolar geometry for accurate tracking across different camera views. This project is useful for applications requiring object tracking in multi-camera setups, such as surveillance and sports analysis.
 
 ## Features
 - Multi-camera object tracking

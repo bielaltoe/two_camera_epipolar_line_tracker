@@ -49,13 +49,6 @@
 - `CONFIDENCE`: Confidence threshold for YOLO.
 - `DISTANCE_THRESHOLD`: Distance threshold for epipolar line matching.
 
-## Requirements
-- Python 3.8+
-- OpenCV
-- NumPy
-- Matplotlib
-- YOLO model weights
-
 ## Contributing
 1. Fork the repository.
 2. Create a new branch (`git checkout -b feature-branch`).

@@ -2,5 +2,8 @@
 /classes.txt
 /models
 /results
-/video_sources
 /__pycache__
+/video_sources/camera_bananal
+/video_sources/multiple_people_videos
+/video_sources/test_distances_video
+/video_sources/umbrella_vid

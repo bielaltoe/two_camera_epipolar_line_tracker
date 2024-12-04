@@ -1,7 +1,7 @@
 # 2 Camera Norm Tracker
 
 ## Description
-2 Camera Norm Tracker is a computer vision project designed to track objects using multiple camera feeds. It leverages YOLO for object detection and epipolar geometry for accurate tracking across different camera views. This project is useful for applications requiring precise object tracking in multi-camera setups, such as surveillance and sports analysis.
+2 Camera Norm Tracker is a computer vision project designed to track objects using 2 camera feeds. It leverages YOLO11 for object detection and epipolar geometry for accurate tracking across different camera views. This project is useful for applications requiring object tracking in multi-camera setups, such as surveillance and sports analysis.
 
 ## Features
 - Multi-camera object tracking
@@ -20,7 +20,7 @@
 ### Steps
 1. Clone the repository:
     ```bash
-    git clone https://github.com/yourusername/2_camera_norm_tracker.git
+    git clone https://github.com/bielaltoe/two_camera_epipolar_line_tracker.git
     ```
 2. Install the required packages:
     ```bash
@@ -28,9 +28,13 @@
     ```
 
 ## Usage
-1. Place your camera calibration files in the `config_camera` directory.
-2. Update the `config.py` file with your settings.
-3. Run the main script:
+1. Enter in source directory:
+    ```bash
+    cd source
+    ```
+2. Place your camera calibration files in the `config_camera` directory.
+3. Update the `config.py` file with your settings.
+4. Run the main script:
     ```bash
     python main.py
     ```
@@ -59,12 +63,6 @@
 4. Push to the branch (`git push origin feature-branch`).
 5. Create a new Pull Request.
 
-## Testing
-Run the test cases using:
-```bash
-python -m unittest discover tests
-```
-
 ## License
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
@@ -72,7 +70,7 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 For issues, please open a GitHub issue or contact the maintainer.
 
 ## Contact
-For questions, contact [yourname@example.com](mailto:yourname@example.com).
+For questions, contact [gabriel.altoe@edu.ufes.br](mailto:gabriel.altoe@edu.ufes.br).
 
 ## References
 - [YOLO](https://github.com/ultralytics/yolov5)

@@ -26,10 +26,6 @@ The 2 Camera Epipolar Line Tracker is a computer vision project designed to trac
     ```bash
     cd two_camera_epipolar_line_tracker
     ```
-3. Install the required packages:
-    ```bash
-    pip install -r requirements.txt
-    ```
 
 ## 💻 Usage
 1. Enter the source directory:

@@ -34,13 +34,14 @@ The 2 Camera Epipolar Line Tracker is a computer vision project designed to trac
 ## 💻 Usage
 1. Enter the source directory:
     ```bash
-    cd source
+    cd two_view_tracker
+    pip install .
     ```
 2. Place your camera calibration files in the `config_camera` directory.
 3. Update the `config.py` file with your settings.
 4. Run the main script:
     ```bash
-    python main.py
+    two-view-tracker.exe your_video_path/cam1.mp4 your_video_path/cam2.mp4
     ```
 
 ## 📸 Demo Results

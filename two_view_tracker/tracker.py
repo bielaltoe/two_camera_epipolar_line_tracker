@@ -1,8 +1,8 @@
-from ultralytics import YOLO
 import numpy as np
-import config
-from Detection import ObjectDetection
-import cv2
+from ultralytics import YOLO
+
+from .config import CLASSES, CONFIDENCE
+from .detection import ObjectDetection
 
 
 class Tracker:
@@ -11,7 +11,7 @@ class Tracker:
         self.trackers = [YOLO(tracker) for tracker in yolo_trackers_list]
         self.results = []
         self.frames = None
-        self.classes = [config.CLASSES]
+        self.classes = [CLASSES]
         print("created")
 
     def detect_and_track(self, cameras_frame: list):
@@ -24,7 +24,7 @@ class Tracker:
                 persist=True,
                 classes=self.classes,
                 device="cuda:0",
-                conf=config.CONFIDENCE,
+                conf=CONFIDENCE,
                 verbose=False,
                 show=False,
                 cls=True,

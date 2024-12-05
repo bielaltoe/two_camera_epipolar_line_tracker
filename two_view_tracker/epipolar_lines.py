@@ -1,9 +1,11 @@
-from load_fundamental_matrices import FundamentalMatrices
+import colorsys
+import random
+
 import cv2
 import numpy as np
-import config
-import random
-import colorsys
+
+from .config import DISTANCE_THRESHOLD
+from .load_fundamental_matrices import FundamentalMatrices
 
 
 class EpipolarLine:
@@ -191,7 +193,7 @@ class EpipolarLine:
         for possible_match in sorted_cross_distances:
             det1, det2, d_cross = possible_match
             if (
-                d_cross < config.DISTANCE_THRESHOLD
+                d_cross < DISTANCE_THRESHOLD
                 and det1.name == det2.name
                 and det1.id not in used_ids_cam1
                 and det2.id not in used_ids_cam2

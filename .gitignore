@@ -9,6 +9,8 @@
 /video_sources/umbrella_vid
 mp4_to_gif.py
 
+*.mp4
+
 /menu_hash.txt
 /message_ids.txt
 # Byte-compiled / optimized / DLL files

@@ -46,19 +46,19 @@ The 2 Camera Epipolar Line Tracker is a computer vision project designed to trac
 ## 📸 Demo Results
 ### Tracking Few People
 <div align="center">
-  <img src="gifs/result_two_cameras_few_people.gif" alt="Test with few people" width="700"/>
+  <img src="./gifs/result_two_cameras_few_people.gif" alt="Test with few people" width="700"/>
   <p><i>Tracking demonstration with a few people in the scene</i></p>
 </div>
 
 ### Multiple People Tracking
 <div align="center">
-  <img src="gifs/multiple_people_vid.gif" alt="Test with multiple people" width="700"/>
+  <img src="./gifs/multiple_people_vid.gif" alt="Test with multiple people" width="700"/>
   <p><i>System performance with multiple people</i></p>
 </div>
 
 ### Umbrella Tracking Test
 <div align="center">
-  <img src="gifs/umbrella_vid.gif" alt="Test with umbrella" width="700"/>
+  <img src="./gifs/umbrella_vid.gif" alt="Test with umbrella" width="700"/>
   <p><i>Demonstration of tracking an umbrella</i></p>
 </div>
 

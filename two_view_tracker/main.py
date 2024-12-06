@@ -12,6 +12,7 @@ from .tracker import Tracker
 from .triangulation import triangulate_point_from_multiple_views_linear
 from .video_loader import VideoLoader
 import os
+
 COLORS = {}
 
 
@@ -131,12 +132,14 @@ def main():
     ax_3d = fig_3d.add_subplot(121, projection="3d")
     ax_2d = fig_3d.add_subplot(122)
     plt.ion()
-    
+
     cam_numbers = []
     for video in videos:
         cam = video
-        cam_numbers.append(int(os.path.basename(cam).replace(".mp4", "").replace("cam", "")))
-        
+        cam_numbers.append(
+            int(os.path.basename(cam).replace(".mp4", "").replace("cam", ""))
+        )
+
     print("Câmeras: ", cam_numbers)
     # Inicializando o tracker e o loader de vídeo
     tracker = Tracker(["yolo11x.pt", "yolo11x.pt"], cam_numbers)
@@ -151,7 +154,7 @@ def main():
         tracker.detect_and_track(frames)
         det = tracker.get_detections()
 
-        matches = epipolar_matcher.match(det, cams=[1, 2])
+        matches = epipolar_matcher.match(det, cams=cam_numbers)
         keypoints_3d_list = []
         ids = []
         for match in matches:

@@ -150,42 +150,12 @@ class EpipolarLine:
                 d_cross = self._cross_distance(
                     det.bbox, det2.bbox, lines_1_2[i], lines_2_1[j]
                 )
-                # simple_distance = self.dist_p_l(
-                #     lines_1_2[i], det2.single_centroid[0]
-                # ) + self.dist_p_l(lines_2_1[j], det.single_centroid[0])
-
+ 
                 cross_distances.append((det, det2, d_cross))
-                # print(
-                #     "===================================================================================================="
-                # )
-                # print(
-                #     f"CROSS Distance between line that came from centroid in {det.cam} - ID{det.id} and centroid ID{det2.id} from {det2.cam}: {d_cross}"
-                # )
-                # # print(
-                # #     f"Distance between line that came from centroid in {det.cam} - ID{det.id} and  centroid ID{det2.id} from {det2.id}: {simple_distance}"
-                # # )
-                # print(
-                #     "===================================================================================================="
-                # )
+
 
         sorted_cross_distances = sorted(cross_distances, key=lambda x: x[2])
 
-        # print("\nSorted cross distances: ", sorted_cross_distances)
-
-        # CODIGO GABRIEL
-        # real_matches = []
-        # matches_ids = []
-        # for possible_match in sorted_cross_distances:
-        #     det1, det2, d_cross = possible_match
-        #     if d_cross < config.DISTANCE_THRESHOLD and det.name == det2.name:
-        #         if (det1.id, det2.id) not in matches_ids:
-        #             real_matches.append((det1, det2))
-        #             matches_ids.append((det1.id, det2.id))
-        #             # print(
-        #             #     f"Match found between ID{det1.id} from CAM{det1.cam} and ID{det2.id} from CAM{det2.cam}"
-        #             # )
-
-        # CODIGO CHATGPT
         used_ids_cam1 = set()  # IDs já utilizados da câmera 1
         used_ids_cam2 = set()  # IDs já utilizados da câmera 2
         real_matches = []
@@ -206,17 +176,5 @@ class EpipolarLine:
         print(
             f"Number of matches => {len(real_matches_ids)}\nMATCHES => {real_matches_ids}\n\n\n"
         )
-
-        #################################################################################################################
-        # OS VIDEOS ESTAO FICANDO DESSINCRONIZADOS FINAL DO VIDEO                                                       #
-        #################################################################################################################
-
-        # print("\nReal matches: ", real_matches)
-
-        # print(
-        #     f"Number of matches => {len(matches_ids)}\nMATCHES => {matches_ids}\n\n\n"
-        # )
-        # print("Detections 1: ", detections_1)
-        # print("Detections 2: ", detections_2)
 
         return real_matches
